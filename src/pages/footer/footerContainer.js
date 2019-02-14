@@ -36,23 +36,22 @@ class FooterContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'store',
-            // hidden: false,
+            selectedTab: 'discover',
+            hidden: false,
             fullScreen: true,
         };
     }
     render() {
-        return (
-      <div style={this.state.fullScreen ? { position: 'fixed', height: '1rem', width: '100%', bottom:0 } : { height: 400 }}>
+        return ( 
+      <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', bottom:'0' } : { height: 400 }}>
         <TabBar
           unselectedTintColor="#9e9e9e"
           tintColor="#000"
-          // barTintColor="white"
-          // hidden={this.state.hidden}
+          barTintColor="white"
+          hidden={this.state.hidden}
           tabBarPosition = "bottom"
         >
           <TabBar.Item
-          style={{overflow:'hidden'}}
             title="推荐"
             key="recommend"
             icon={<div style={{
@@ -136,10 +135,8 @@ class FooterContainer extends Component {
                 selectedTab: 'store',
               });
               this.goRoute('store')
-              //   
             }}
           >
-            {/* <store></store> */}
           <Route path='/store' component ={store}></Route>
           </TabBar.Item>
            <TabBar.Item
