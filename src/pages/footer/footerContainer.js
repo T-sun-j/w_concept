@@ -212,11 +212,11 @@ export  class footerContainer extends Component {
   goRoute(value){
     this.props.history.push('/'+value)
   }
-  // componentDidMount(){
-  //   this.setstate({
-  //     selectedTab:this.props.location.pathname.slice(1)
-  //   })
-  // }
+  componentDidMount(){
+    this.setstate({
+      selectedTab:this.props.location.pathname.slice(1)
+    })
+  }
 
 }
 export default withRouter(footerContainer)
