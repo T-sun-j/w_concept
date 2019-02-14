@@ -24,8 +24,8 @@ import {
   CarContainer as car
 } from '../shoppingcar'
 import {
-  StoreHomeContainer as storeHome
-} from '../storeHome'
+  StoreContainer as store
+} from '../store'
 
 
 
@@ -36,7 +36,7 @@ export  class footerContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'storeHome',
+            selectedTab: 'store',
             hidden: false,
             fullScreen: true,
         };
@@ -126,16 +126,16 @@ export  class footerContainer extends Component {
             title="商店"
             key="store"
             selected = {
-                this.state.selectedTab === 'storeHome'
+                this.state.selectedTab === 'store'
             }
             onPress={() => {
               this.setState({
-                selectedTab: 'storeHome',
+                selectedTab: 'store',
               });
-              this.goRoute('storeHome')
+              this.goRoute('store')
             }}
           >
-          <Route path='/storeHome' component ={storeHome}></Route>
+          <Route path='/store' component ={store}></Route>
           </TabBar.Item>
            <TabBar.Item
             icon={
@@ -212,11 +212,11 @@ export  class footerContainer extends Component {
   goRoute(value){
     this.props.history.push('/'+value)
   }
-  componentDidMount(){
-    this.setstate({
-      selectedTab:this.props.location.pathname.slice(1)
-    })
-  }
+  // componentDidMount(){
+  //   this.setstate({
+  //     selectedTab:this.props.location.pathname.slice(1)
+  //   })
+  // }
 
 }
 export default withRouter(footerContainer)
