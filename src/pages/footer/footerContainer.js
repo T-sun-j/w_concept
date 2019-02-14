@@ -37,21 +37,22 @@ export  class footerContainer extends Component {
         super(props);
         this.state = {
             selectedTab: 'store',
-            hidden: false,
+            // hidden: false,
             fullScreen: true,
         };
     }
     render() {
-        return ( 
-      <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', bottom:'0' } : { height: 400 }}>
+        return (
+      <div style={this.state.fullScreen ? { position: 'fixed', height: '1rem', width: '100%', bottom:0 } : { height: 400 }}>
         <TabBar
           unselectedTintColor="#9e9e9e"
           tintColor="#000"
-          barTintColor="white"
-          hidden={this.state.hidden}
+          // barTintColor="white"
+          // hidden={this.state.hidden}
           tabBarPosition = "bottom"
         >
           <TabBar.Item
+          style={{overflow:'hidden'}}
             title="推荐"
             key="recommend"
             icon={<div style={{
@@ -71,12 +72,13 @@ export  class footerContainer extends Component {
               this.setState({
                 selectedTab: 'recommend',
               });
-              this.goRoute('home')
+              this.goRoute('recommend')
             }}
           >
-       <Switch>
-          <Route path='/recommend' component ={recommend}></Route>
-        </Switch>
+          <recommend></recommend>
+       {/* <Switch> */}
+          {/* <Route path='/recommend' component ={recommend}></Route> */}
+        {/* </Switch> */}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -104,6 +106,7 @@ export  class footerContainer extends Component {
             }}
             
           >
+          {/* <discover></discover> */}
           <Route path='/discover' component ={discover}></Route>
           </TabBar.Item>
           <TabBar.Item
@@ -133,8 +136,10 @@ export  class footerContainer extends Component {
                 selectedTab: 'store',
               });
               this.goRoute('store')
+              //   
             }}
           >
+            {/* <store></store> */}
           <Route path='/store' component ={store}></Route>
           </TabBar.Item>
            <TabBar.Item
@@ -168,6 +173,7 @@ export  class footerContainer extends Component {
               this.goRoute('car')
             }}
           >
+          {/* <car></car> */}
           <Route path='/car' component ={car}></Route>
           </TabBar.Item>
            <TabBar.Item
@@ -201,6 +207,7 @@ export  class footerContainer extends Component {
               this.goRoute('mine')
             }}
           >
+          {/* <mine></mine> */}
  <Route path='/mine' component ={mine}></Route>
           </TabBar.Item>
           
@@ -220,3 +227,4 @@ export  class footerContainer extends Component {
 
 }
 export default withRouter(footerContainer)
+// export default footerContainer

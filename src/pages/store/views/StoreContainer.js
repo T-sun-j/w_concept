@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import  Header  from "./header/header";
 // import {HeaderStyled} from "./header/styledComponent";
  
- 
 // const mapState = state => {
 //   return {
  
