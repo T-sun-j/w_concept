@@ -4,22 +4,45 @@ import React, {
 import {
     TabBar
 } from 'antd-mobile';
+
 import {
-  Footer
-} from './styledComponents';
+  Route,
+  withRouter,
+  Switch
+} from 'react-router-dom'
+
+import {
+  DiscoverContainer as discover
+} from '../discover'
+import {
+  MineContainer as mine
+} from '../mine'
+import {
+  RecommendContainer as recommend
+} from '../recommend'
+import {
+  CarContainer as car
+} from '../shoppingcar'
+import {
+  StoreHomeContainer as storeHome
+} from '../storeHome'
+
+
+
+
+
 
 export  class footerContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'redTab',
+            selectedTab: 'storeHome',
             hidden: false,
             fullScreen: true,
         };
     }
     render() {
         return ( 
-          <Footer>
       <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', bottom:'0' } : { height: 400 }}>
         <TabBar
           unselectedTintColor="#9e9e9e"
@@ -32,8 +55,8 @@ export  class footerContainer extends Component {
             title="推荐"
             key="recommend"
             icon={<div style={{
-              width: '22px',
-              height: '22px',
+              width: '25px',
+              height: '25px',
               background: 'url(https:////img01.wconceptimg.cn/ws/uploads/2018/08/tabbarrecommendbuttonnormal3x.png) center center /  21px 21px no-repeat' }}
             />
             }
@@ -48,10 +71,12 @@ export  class footerContainer extends Component {
               this.setState({
                 selectedTab: 'recommend',
               });
+              this.goRoute('home')
             }}
-            data-seed="logId"
           >
-      <div>{"recommend"}</div>
+       <Switch>
+          <Route path='/recommend' component ={recommend}></Route>
+        </Switch>
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -75,10 +100,11 @@ export  class footerContainer extends Component {
               this.setState({
                 selectedTab: 'discover',
               });
+              this.goRoute('discover')
             }}
-            data-seed="logId1"
+            
           >
-          <div>{"discover"}</div>
+          <Route path='/discover' component ={discover}></Route>
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -100,15 +126,16 @@ export  class footerContainer extends Component {
             title="商店"
             key="store"
             selected = {
-                this.state.selectedTab === 'store'
+                this.state.selectedTab === 'storeHome'
             }
             onPress={() => {
               this.setState({
-                selectedTab: 'store',
+                selectedTab: 'storeHome',
               });
+              this.goRoute('storeHome')
             }}
           >
-<div>{"store"}</div>
+          <Route path='/storeHome' component ={storeHome}></Route>
           </TabBar.Item>
            <TabBar.Item
             icon={
@@ -138,9 +165,10 @@ export  class footerContainer extends Component {
               this.setState({
                 selectedTab: 'shoppingcar',
               });
+              this.goRoute('car')
             }}
           >
-        <div>{"shoppingcar"}</div>
+          <Route path='/car' component ={car}></Route>
           </TabBar.Item>
            <TabBar.Item
             icon={
@@ -170,16 +198,25 @@ export  class footerContainer extends Component {
               this.setState({
                 selectedTab: 'mine',
               });
+              this.goRoute('mine')
             }}
           >
- <div>{"mine"}</div>
+ <Route path='/mine' component ={mine}></Route>
           </TabBar.Item>
           
         </TabBar>
       </div>
-      </Footer>
-)
+        )
 }
 
+  goRoute(value){
+    this.props.history.push('/'+value)
+  }
+  // componentDidMount(){
+  //   this.setstate({
+  //     selectedTab:this.props.location.pathname.slice(1)
+  //   })
+  // }
+
 }
-export default footerContainer
+export default withRouter(footerContainer)
