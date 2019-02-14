@@ -1,5 +1,5 @@
-import Footer from './footerContainer'
+import FooterContainer from './footerContainer'
 
 export {
-    Footer
+    FooterContainer
 }
