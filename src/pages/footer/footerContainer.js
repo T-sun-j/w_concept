@@ -36,7 +36,7 @@ class FooterContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'store',
+            selectedTab: 'discover',
             hidden: false,
             fullScreen: true,
         };
