@@ -12,16 +12,16 @@ import {
 } from 'react-router-dom'
 
 import {
-  DiscoverContainer as discover
+  DiscoverContainer as Discover
 } from '../discover'
 import {
-  MineContainer as mine
+  MineContainer as Mine
 } from '../mine'
 import {
-  RecommendContainer as recommend
+  RecommendContainer as Recommend
 } from '../recommend'
 import {
-  CarContainer as car
+  CarContainer as Car
 } from '../shoppingcar'
 import {
   StoreContainer as store
@@ -32,7 +32,7 @@ import {
 
 
 
-export  class footerContainer extends Component {
+class FooterContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -75,10 +75,10 @@ export  class footerContainer extends Component {
               this.goRoute('recommend')
             }}
           >
-          <recommend></recommend>
-       {/* <Switch> */}
-          {/* <Route path='/recommend' component ={recommend}></Route> */}
-        {/* </Switch> */}
+       <Switch>
+         {/* <Recommend></Recommend> */}
+          <Route path='/recommend' component ={Recommend}></Route>
+        </Switch>
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -106,8 +106,8 @@ export  class footerContainer extends Component {
             }}
             
           >
-          {/* <discover></discover> */}
-          <Route path='/discover' component ={discover}></Route>
+          {/* <Discover></Discover> */}
+          <Route path='/discover' component ={Discover}></Route>
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -173,8 +173,8 @@ export  class footerContainer extends Component {
               this.goRoute('car')
             }}
           >
-          {/* <car></car> */}
-          <Route path='/car' component ={car}></Route>
+          <Car></Car>
+          {/* <Route path='/car' component ={Car}></Route> */}
           </TabBar.Item>
            <TabBar.Item
             icon={
@@ -207,8 +207,8 @@ export  class footerContainer extends Component {
               this.goRoute('mine')
             }}
           >
-          {/* <mine></mine> */}
- <Route path='/mine' component ={mine}></Route>
+          <Mine></Mine>
+ <Route path='/mine' component ={Mine}></Route>
           </TabBar.Item>
           
         </TabBar>
@@ -226,5 +226,4 @@ export  class footerContainer extends Component {
   // }
 
 }
-export default withRouter(footerContainer)
-// export default footerContainer
+export default withRouter(FooterContainer)

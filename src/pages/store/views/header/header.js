@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 // import { HeadSwiper } from "./styledComponents";
 
 // const mapState = (state) => {
@@ -14,11 +14,11 @@ class Header extends Component {
     return(
       // <HeadSwiper>
         <div>
-            <a>
+        {/* //     <a> */}
                 <i className="icon-wconcept">11111111111</i>
-            </a>
-        </div>
-      // </HeadSwiper>
+        {/* //     </a> */}
+         </div>
+      //  </HeadSwiper>
     )
 
   }
