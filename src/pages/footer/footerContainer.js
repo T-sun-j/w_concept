@@ -32,7 +32,7 @@ import {
 
 
 
-class footerContainer extends Component {
+class FooterContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -101,12 +101,12 @@ class footerContainer extends Component {
               this.setState({
                 selectedTab: 'discover',
               });
-              // this.goRoute('discover')
+              this.goRoute('discover')
             }}
             
           >
-          <Discover></Discover>
-          {/* <Route path='/discover' component ={Discover}></Route> */}
+          {/* <Discover></Discover> */}
+          <Route path='/discover' component ={Discover}></Route>
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -167,7 +167,7 @@ class footerContainer extends Component {
               this.setState({
                 selectedTab: 'shoppingcar',
               });
-              // this.goRoute('car')
+              this.goRoute('car')
             }}
           >
           <Car></Car>
@@ -201,11 +201,11 @@ class footerContainer extends Component {
               this.setState({
                 selectedTab: 'mine',
               });
-              // this.goRoute('mine')
+              this.goRoute('mine')
             }}
           >
           <Mine></Mine>
- {/* <Route path='/mine' component ={Mine}></Route> */}
+ <Route path='/mine' component ={Mine}></Route>
           </TabBar.Item>
           
         </TabBar>
@@ -213,9 +213,9 @@ class footerContainer extends Component {
         )
 }
 
-  // goRoute(value){
-  //   this.props.history.push('/'+value)
-  // }
+  goRoute(value){
+    this.props.history.push('/'+value)
+  }
   // componentDidMount(){
   //   this.setstate({
   //     selectedTab:this.props.location.pathname.slice(1)
@@ -223,4 +223,4 @@ class footerContainer extends Component {
   // }
 
 }
-export default withRouter(footerContainer)
+export default withRouter(FooterContainer)

@@ -18,10 +18,10 @@ const mapDispatch = dispatch => {
 };
 
 class StoreContainer extends Component {
-  constructor() {
-    super();
+  // constructor() {
+  //   super();
    
-  }
+  // }
   render() {
     return (
       <div>
