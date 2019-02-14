@@ -5,11 +5,11 @@ import {
     TabBar
 } from 'antd-mobile';
 
-// import {
-//   // Route,
-//   // withRouter,
-//   // Switch
-// } from 'react-router-dom'
+import {
+  Route,
+  withRouter,
+  Switch
+} from 'react-router-dom'
 
 import {
   DiscoverContainer as Discover
@@ -24,19 +24,19 @@ import {
   CarContainer as Car
 } from '../shoppingcar'
 import {
-  StoreHomeContainer as StoreHome
-} from '../storeHome'
+  StoreContainer as store
+} from '../store'
 
 
 
 
 
 
-class FooterContainer extends Component {
+class footerContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'storeHome',
+            selectedTab: 'store',
             hidden: false,
             fullScreen: true,
         };
@@ -71,13 +71,13 @@ class FooterContainer extends Component {
               this.setState({
                 selectedTab: 'recommend',
               });
-              // this.goRoute('recommend')
+              this.goRoute('recommend')
             }}
           >
-       {/* <Switch> */}
-         <Recommend></Recommend>
-          {/* <Route path='/recommend' component ={Recommend}></Route> */}
-        {/* </Switch> */}
+       <Switch>
+         {/* <Recommend></Recommend> */}
+          <Route path='/recommend' component ={Recommend}></Route>
+        </Switch>
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -128,17 +128,16 @@ class FooterContainer extends Component {
             title="商店"
             key="store"
             selected = {
-                this.state.selectedTab === 'storeHome'
+                this.state.selectedTab === 'store'
             }
             onPress={() => {
               this.setState({
-                selectedTab: 'storeHome',
+                selectedTab: 'store',
               });
-              // this.goRoute('storeHome')
+              this.goRoute('store')
             }}
           >
-          <StoreHome></StoreHome>
-          {/* <Route path='/storeHome' component ={StoreHome}></Route> */}
+          <Route path='/store' component ={store}></Route>
           </TabBar.Item>
            <TabBar.Item
             icon={
@@ -224,5 +223,4 @@ class FooterContainer extends Component {
   // }
 
 }
-// export default withRouter(FooterContainer)
-export default FooterContainer
+export default withRouter(footerContainer)

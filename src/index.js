@@ -3,15 +3,20 @@ import ReactDOM from 'react-dom';
 import 'antd-mobile/dist/antd-mobile.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom'
+import { Provider } from 'react-redux'
 
-//引不进来assets/styles/两个文件
+import "./assets/styles/reset.css"
+import "./assets/styles/animate.css"
 
-
+import store from './store'
 
 ReactDOM.render(
-    <BrowserRouter>
-        <App/> 
-     </BrowserRouter>,
+    <Provider store={store}>
+        <BrowserRouter>
+            <App/> 
+        </BrowserRouter>
+    </Provider>
+    ,
    document.getElementById('root')
 );
 
