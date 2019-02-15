@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {FooterContainer as index} from "./pages/footer"
+import Flexble from "./assets/js/flexble"
 import {
   Route,
   Redirect,

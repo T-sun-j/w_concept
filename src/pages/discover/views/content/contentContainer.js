@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Discovercontent} from './styleComponents'
 import {fetch} from "whatwg-fetch";
-import {  Toast } from "antd-mobile";
+// import {  Toast } from "antd-mobile";
 
 
 export default class ContentContainer extends Component {
