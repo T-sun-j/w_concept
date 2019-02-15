@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {FooterContainer as index} from "./pages/footer"
-import Flexble from "./assets/js/flexble"
+
 import {
   Route,
   Redirect,
@@ -11,7 +11,7 @@ import {
 
 // import {MineContainer as mine} from './pages/mine'
 // import {RecommendContainer as recommend} from './pages/recommend'
-// import {CarContainer as car} from './pages/shoppingcar'
+import {CarContainer as car} from './pages/shoppingcar'
 // import {StoreContainer as store} from './pages/store'
 
 
@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <Switch>
-          <Redirect exact  from="/" to="/store" />     
+          <Redirect exact  from="/" to="/car" />     
               
           {/* <Route exact  path='/store' component={store}></Route> */}
           {/* <Route exact  path='/discover' component={discover}></Route>

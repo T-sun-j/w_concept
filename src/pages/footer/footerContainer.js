@@ -30,13 +30,11 @@ import {
 
 
 
-
-
 class FooterContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'discover',
+          selectedTab: 'shoppingcar',
             hidden: false,
             fullScreen: true,
         };
