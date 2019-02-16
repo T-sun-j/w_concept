@@ -7,7 +7,6 @@ const Banner2Styled = styled.div`
         height: 1.48rem;
         overflow: hidden;
         background: #fff;
-        margin-bottom: 2rem;
      .banner2Wrap{
         width: 3.3rem;
         /* margin-left: .1rem; */
