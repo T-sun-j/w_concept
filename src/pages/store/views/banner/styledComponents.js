@@ -20,9 +20,10 @@ const BannerStyled = styled.div`
                 left:0;
                 float: left;
                 .bannerOne{
-                    width: 3.752rem;
+                    width: 3.75rem;
                     height: 100%;
                     img{
+                        border:none;
                         width: 100%;
                         height: 100%;
                     }
@@ -30,7 +31,7 @@ const BannerStyled = styled.div`
             }
             .spanBtn{
                 position: absolute;
-                left: -.7rem;
+                left: -0.7rem;
                 bottom: .06rem;
                 span{
                     margin: 0 .08rem;

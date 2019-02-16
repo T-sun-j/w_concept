@@ -1,7 +1,7 @@
 
 import { fromJS } from 'immutable'
 
-const defaultState = fromJS({
+      const defaultState = fromJS({
       
 })
 

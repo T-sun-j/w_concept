@@ -38,6 +38,7 @@ export default class Banner  extends Component {
   }
   componentDidMount(){
        this.initialBannerSwiper();
+
     }
   initialBannerSwiper =()=>{
     if(this.bannerSwiper){

@@ -20,14 +20,14 @@ class App extends Component {
   render() {
     return (
       <Switch>
-          <Redirect exact  from="/" to="/car" />     
+          <Redirect exact  from="/" to="/discover" />     
               
-          {/* <Route exact  path='/store' component={store}></Route> */}
-          {/* <Route exact  path='/discover' component={discover}></Route>
-          <Route exact  path='/car' component={car}></Route>
-          <Route exact  path='/recommend' component={recommend}></Route>
-          <Route exact  path='/mine' component={mine}></Route> */}
-          <Route   path='/' component={index}></Route>  
+          {/* <Route exact  path='/store' component={store}></Route>  */}
+           {/* <Route exact  path='/discover' component={discover}></Route> */}
+          {/* <Route exact  path='/car' component={car}></Route> */}
+          {/* <Route exact  path='/recommend' component={recommend}></Route> */}
+          {/* <Route exact  path='/mine' component={mine}></Route> */}
+        <Route path='/' component={index}></Route>  
         </Switch>
     );
   }

@@ -6,6 +6,7 @@ export default class HeaderContainers extends Component {
     return (
       <StoreHeader>
         <div className="headerWrap">
+        
           <div className="logo">
               <img src="https://img03.wconceptimg.cn/static/a.m/images/logo/wconcept.png" alt=""/>
           </div>

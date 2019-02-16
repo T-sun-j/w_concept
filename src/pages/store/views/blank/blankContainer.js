@@ -10,9 +10,7 @@ export default class Blank  extends Component {
   render() {
     return (
       <BlankStyle>
-        <div>
-
-        </div>
+        <div></div>
       </BlankStyle>
     )
   }
