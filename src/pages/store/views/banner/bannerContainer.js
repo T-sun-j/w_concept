@@ -23,14 +23,13 @@ export default class Banner  extends Component {
       <BannerStyled>
         <div className="bannerWrap">
           <div className="swiper-container bannerCon">
-              <div className="swiper-wrapper bannerWrap">
-                  {this.state.bannerImg.map((item,index)=>( 
-                      <div key={index} className="swiper-slide bannerOne"  >
-                        <img src={item}/>
-                      </div>
-                   
-                   ))} 
-              </div>
+              <div className="swiper-wrapper bannerWrap">{this.state.bannerImg.map((item,index)=>{
+                                                            return(
+                                                              <div key={index} className="swiper-slide bannerOne"  >
+                                                                <img src={item}/>
+                                                              </div>
+                                                            )
+                                                          })}</div>
               <div className='swiper-pagination spanBtn'></div>
           </div>
         </div>
@@ -47,7 +46,7 @@ export default class Banner  extends Component {
     this.bannerSwiper =  new Swiper('.bannerCon', {
             loop: true,     //循环
             autoplay:{      //自动播放，注意：直接给autoplay:true的话，在点击之后不能再自动播放了
-                delay: 30000000,
+                delay: 3000,
                 disableOnInteraction: false,    //户操作swiper之后，不停止autoplay。
             },
             pagination: {

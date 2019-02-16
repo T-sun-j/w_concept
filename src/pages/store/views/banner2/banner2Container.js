@@ -19,14 +19,11 @@ export default class Banner2  extends Component {
         <div className="banner2Wrap">
           <div className="bannerw2">
               <div className="swiper-container bannerCon2" >
-                  <div className="swiper-wrapper bannerWrap2">
-                    {this.state.banner2Img.map((item,index)=>( 
+                  <div className="swiper-wrapper bannerWrap2">{this.state.banner2Img.map((item,index)=>( 
                         <div key={index} className="swiper-slide bannerOne2"  >
                           <img src={item}/>
                         </div>
-                     
-                    ))} 
-              </div>
+                        ))}</div>
           </div>
          
           </div>

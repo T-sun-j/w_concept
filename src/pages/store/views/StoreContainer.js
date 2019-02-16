@@ -7,6 +7,11 @@ import Banner2 from "./banner2/banner2Container"
 import Blank from "./blank/blankContainer"
 import Tab from "./newsTab/tabContainer"
 import {StoreMain} from "./styledComponent";
+//home mian
+import GoodList from "./goodlist/goodlistContainer"
+import GuessLikeContainer from "./guesslike"
+import NewProductsContainer from "./newProducts"
+
 const mapState = state => {
   return {
  
@@ -29,11 +34,14 @@ class StoreContainer extends Component {
       <Fragment>
             <Header/>
             <StoreMain>
-              <Blank/>
-              <Nav/>
-              <Banner/>
-              <Tab/>
-              <Banner2/>
+                <Blank/>
+                <Nav/>
+                <Banner/>
+                <Tab/>
+                <Banner2/>
+                <GoodList/>
+                <GuessLikeContainer/>
+                <NewProductsContainer/>
             </StoreMain>
       </Fragment>
     )

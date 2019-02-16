@@ -12,16 +12,12 @@ const BannerStyled = styled.div`
          .bannerCon{
             width: 100%;
             height: 100%;
-            /* position: absolute; */
-            /* top: 0; */
-            /* left:-.rem; */
             .bannerWrap{
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 top: 0;
                 left:0;
-                /* overflow: hidden; */
                 float: left;
                 .bannerOne{
                     width: 3.752rem;
