@@ -1,14 +1,11 @@
-
 import styled from 'styled-components'
 
-const StoreMain = styled.div`
+const BlankStyle = styled.div`
     width:100%;
-    height: auto;
+    height: .9rem;
     background: #fff;
-   
 `
 
-
 export {
-    StoreMain,
+    BlankStyle,
 }
