@@ -12,10 +12,10 @@ const BannerStyled = styled.div`
          .bannerCon{
             width: 100%;
             height: 100%;
-            /* position: absolute; */
-            /* top: 0; */
-            /* left:-.rem; */
-            .bannerWrap{
+            /* position: absolute; 
+            top: 0;
+            left:-.rem; */
+            .bannerWrap1{
                 width: 100%;
                 height: 100%;
                 position: absolute;
@@ -24,9 +24,10 @@ const BannerStyled = styled.div`
                 /* overflow: hidden; */
                 float: left;
                 .bannerOne{
-                    width: 3.752rem;
+                    width: 3.75rem;
                     height: 100%;
                     img{
+                        border:none;
                         width: 100%;
                         height: 100%;
                     }
@@ -34,7 +35,7 @@ const BannerStyled = styled.div`
             }
             .spanBtn{
                 position: absolute;
-                left: -.7rem;
+                left: -0.7rem;
                 bottom: .06rem;
                 span{
                     margin: 0 .08rem;

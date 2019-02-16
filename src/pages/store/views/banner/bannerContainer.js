@@ -23,13 +23,9 @@ export default class Banner  extends Component {
       <BannerStyled>
         <div className="bannerWrap">
           <div className="swiper-container bannerCon">
-              <div className="swiper-wrapper bannerWrap">
-                  {this.state.bannerImg.map((item,index)=>( 
-                      <div key={index} className="swiper-slide bannerOne"  >
-                        <img src={item}/>
-                      </div>
-                   
-                   ))} 
+              <div className="swiper-wrapper bannerWrap1">{this.state.bannerImg.map((item,index)=>{ 
+                    return(<div key={index} className="swiper-slide bannerOne"><img src={item} alt=""/></div>)      
+            })} 
               </div>
               <div className='swiper-pagination spanBtn'></div>
           </div>
@@ -39,6 +35,7 @@ export default class Banner  extends Component {
   }
   componentDidMount(){
        this.initialBannerSwiper();
+
     }
   initialBannerSwiper =()=>{
     if(this.bannerSwiper){

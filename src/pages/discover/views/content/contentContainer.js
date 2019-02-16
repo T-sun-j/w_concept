@@ -1,47 +1,52 @@
 import React, { Component } from 'react'
-import {Discovercontent} from './styleComponents'
-import {fetch} from "whatwg-fetch";
+
+import ContentUi from './contentUi'
 // import {  Toast } from "antd-mobile";
+import { getDis } from "../../actionCreator";
+import { connect } from 'react-redux';
 
-
-export default class ContentContainer extends Component {
+class ContentContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listData:[],
-      descriptions:[],
+      firstData: [],
+      descriptions: [],
       // descriptions:[],
       // descriptions:[],
-      isLoading:false,
-      hasMore:true
+      isLoading: false,
+      hasMore: true
     }
   }
-  
+
   render() {
+    // console.log(this.firstData)
     return (
-      <Discovercontent>
-          <div></div>
-      </Discovercontent>
+      <ContentUi></ContentUi>
     )
   }
-  async componentDidMount(){
-    // Toast.loading("loading...", null);
-    await fetch("/api/content/discover?page=5&size=5&platform=M.Web",{
-      method:"get",
-    })
-    .then(res=>res.json())
-    .then(result=>{
-      this.listData = result.items;
-    })
+  componentDidMount() {
+    this.props.discoverGetdata()
+    // this.setState({
+    //   firstData: this.props.discoverList._tail.array
+    // }, () => {
+    //   console.log(this.firstData)
+    // })
 
-    this.listData.map((e,item) =>{
-      console.log(e)
-      return this.state.descriptions.push(e.descriptions)
-    })
-    this.listData.map((e, item) => {
-      console.log(e)
-      return this.state.descriptions.push(e.descriptions)
-    })
+    //   componentDidUpdate() {
+
+
+
+
   }
-
 }
+
+const mapStateToProps = (state) => ({
+  discoverList: state.getIn(["discover", "discoverList"])
+})
+const mapDispatchToProps = (dispatch) => ({
+  discoverGetdata() {
+    dispatch(getDis())
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContentContainer)
