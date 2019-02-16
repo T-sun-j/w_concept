@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 import {Discovercontent} from './styleComponents'
 import {fetch} from "whatwg-fetch";
-import {  Toast } from "antd-mobile";
+// import {  Toast } from "antd-mobile";
 
 
 export default class ContentContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ListData:[],
+      listData:[],
+      descriptions:[],
+      // descriptions:[],
+      // descriptions:[],
       isLoading:false,
       hasMore:true
     }
@@ -21,22 +24,24 @@ export default class ContentContainer extends Component {
       </Discovercontent>
     )
   }
-  componentDidMount(){
+  async componentDidMount(){
     // Toast.loading("loading...", null);
-    fetch("/api/content/discover?page=1&size=5&platform=M.Web",{
+    await fetch("/api/content/discover?page=5&size=5&platform=M.Web",{
       method:"get",
-      // headers: {
-      //   "Content-Type": "application/json;charset=UTF-8"
-      // },
-      // body:JSON.stringify({
-      //   page: "1",
-      //   size: "5",
-      //   platform: "M.Web",
-      // })
     })
     .then(res=>res.json())
     .then(result=>{
-        console.log(result)
+      this.listData = result.items;
+    })
+
+    this.listData.map((e,item) =>{
+      console.log(e)
+      return this.state.descriptions.push(e.descriptions)
+    })
+    this.listData.map((e, item) => {
+      console.log(e)
+      return this.state.descriptions.push(e.descriptions)
     })
   }
+
 }

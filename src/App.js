@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {FooterContainer as index} from "./pages/footer"
+import {FooterContainer as footer} from "./pages/footer"
 import {
   Route,
   Redirect,
@@ -21,12 +21,12 @@ class App extends Component {
       <Switch>
           <Redirect exact  from="/" to="/store" />     
               
-          {/* <Route exact  path='/store' component={store}></Route> */}
-          {/* <Route exact  path='/discover' component={discover}></Route>
-          <Route exact  path='/car' component={car}></Route>
-          <Route exact  path='/recommend' component={recommend}></Route>
-          <Route exact  path='/mine' component={mine}></Route> */}
-          <Route   path='/' component={index}></Route>  
+          {/* <Route exact  path='/store' component={store}></Route>  */}
+           {/* <Route exact  path='/discover' component={discover}></Route> */}
+          {/* <Route exact  path='/car' component={car}></Route> */}
+          {/* <Route exact  path='/recommend' component={recommend}></Route> */}
+          {/* <Route exact  path='/mine' component={mine}></Route> */}
+          <Route   path='/' component={footer}></Route>  
         </Switch>
     );
   }

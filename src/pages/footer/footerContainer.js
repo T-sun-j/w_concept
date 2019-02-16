@@ -36,7 +36,7 @@ class FooterContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'discover',
+            selectedTab: 'store',
             hidden: false,
             fullScreen: true,
         };
@@ -44,6 +44,7 @@ class FooterContainer extends Component {
     render() {
         return ( 
       <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', bottom:'0' } : { height: 400 }}>
+
         <TabBar
           unselectedTintColor="#9e9e9e"
           tintColor="#000"
@@ -170,8 +171,8 @@ class FooterContainer extends Component {
               this.goRoute('car')
             }}
           >
-          <Car></Car>
-          {/* <Route path='/car' component ={Car}></Route> */}
+          {/* <Car></Car> */}
+          <Route path='/car' component ={Car}></Route>
           </TabBar.Item>
            <TabBar.Item
             icon={
@@ -209,6 +210,7 @@ class FooterContainer extends Component {
           </TabBar.Item>
           
         </TabBar>
+       
       </div>
         )
 }
