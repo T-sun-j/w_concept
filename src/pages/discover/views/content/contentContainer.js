@@ -25,14 +25,6 @@ export default class ContentContainer extends Component {
     // Toast.loading("loading...", null);
     fetch("/api/content/discover?page=1&size=5&platform=M.Web",{
       method:"get",
-      // headers: {
-      //   "Content-Type": "application/json;charset=UTF-8"
-      // },
-      // body:JSON.stringify({
-      //   page: "1",
-      //   size: "5",
-      //   platform: "M.Web",
-      // })
     })
     .then(res=>res.json())
     .then(result=>{

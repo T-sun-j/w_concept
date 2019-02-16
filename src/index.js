@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 
 import "./assets/styles/reset.css"
 import "./assets/styles/animate.css"
+// import "./assets/js/flexble"
 
 import store from './store'
 
