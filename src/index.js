@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd-mobile/dist/antd-mobile.css';
+// import DatePicker from 'antd-mobile/lib/date-picker';  
 import App from './App';
 import {BrowserRouter} from 'react-router-dom'
 import { Provider } from 'react-redux'

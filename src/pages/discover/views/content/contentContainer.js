@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-
-import ContentUi from './contentUi'
+import { Discovercontent } from './styleComponents'
+// import ContentUi from './contentUi'
 // import {  Toast } from "antd-mobile";
+import Immutable from 'immutable';
 import { getDis } from "../../actionCreator";
 import { connect } from 'react-redux';
 
@@ -11,32 +12,35 @@ class ContentContainer extends Component {
     this.state = {
       firstData: [],
       descriptions: [],
-      // descriptions:[],
-      // descriptions:[],
       isLoading: false,
       hasMore: true
     }
   }
 
   render() {
-    // console.log(this.firstData)
     return (
-      <ContentUi></ContentUi>
+      <Discovercontent>
+        <div>
+          <ul>
+            {
+              firstData.map((item,index)=>{
+                  return  <li>
+
+                  </li>
+                })
+              
+            }
+          </ul>
+        </div>
+      </Discovercontent>
     )
+  }
+
+  componentWillReceiveProps(newProps) {
+      this.firstData=newProps.discoverList.toJS()     
   }
   componentDidMount() {
     this.props.discoverGetdata()
-    // this.setState({
-    //   firstData: this.props.discoverList._tail.array
-    // }, () => {
-    //   console.log(this.firstData)
-    // })
-
-    //   componentDidUpdate() {
-
-
-
-
   }
 }
 

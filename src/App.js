@@ -11,7 +11,7 @@ import {
 
 // import {MineContainer as mine} from './pages/mine'
 // import {RecommendContainer as recommend} from './pages/recommend'
-import {CarContainer as car} from './pages/shoppingcar'
+// import {CarContainer as car} from './pages/shoppingcar'
 // import {StoreContainer as store} from './pages/store'
 
 
@@ -20,13 +20,13 @@ class App extends Component {
   render() {
     return (
       <Switch>
-          <Redirect exact  from="/" to="/discover" />     
+        {/* <Redirect from="/" to="/discover" />      */}
               
-          {/* <Route exact  path='/store' component={store}></Route>  */}
-           {/* <Route exact  path='/discover' component={discover}></Route> */}
-          {/* <Route exact  path='/car' component={car}></Route> */}
-          {/* <Route exact  path='/recommend' component={recommend}></Route> */}
-          {/* <Route exact  path='/mine' component={mine}></Route> */}
+          {/* <Route   path='/store' component={store}></Route>  */}
+           {/* <Route   path='/discover' component={discover}></Route> */}
+          {/* <Route   path='/car' component={car}></Route> */}
+          {/* <Route   path='/recommend' component={recommend}></Route> */}
+          {/* <Route   path='/mine' component={mine}></Route> */}
         <Route path='/' component={index}></Route>  
         </Switch>
     );
