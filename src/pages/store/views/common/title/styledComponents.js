@@ -13,6 +13,17 @@ const TitleWrap = styled.div`
         text-align: center;
         font-size: 15px;
         font-weight: bold;
+        position: relative;
+        a{
+            position: absolute;
+            right: 12px;
+            content: " ";
+            width: 30px;
+            height: 65px;
+            top: 0;
+            background: url(//img03.wconceptimg.cn/skin/frontend/wcc/default/images/2017/homepagev4/group8Copy2_2x.png) no-repeat center center;
+            background-size: 75%;
+        }
         .titleSpan{
             position: relative;
             display: inline-block;

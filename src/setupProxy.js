@@ -8,4 +8,5 @@ module.exports=(app)=>{
             "^/api":""
         }
     }))
+    
 }

@@ -26,7 +26,7 @@ export default class Banner  extends Component {
               <div className="swiper-wrapper bannerWrap">{this.state.bannerImg.map((item,index)=>{
                                                             return(
                                                               <div key={index} className="swiper-slide bannerOne"  >
-                                                                <img src={item}/>
+                                                                <img alt="" src={item}/>
                                                               </div>
                                                             )
                                                           })}</div>
