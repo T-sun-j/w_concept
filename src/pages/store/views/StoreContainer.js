@@ -11,6 +11,8 @@ import {StoreMain} from "./styledComponent";
 import GoodList from "./goodlist/goodlistContainer"
 import GuessLikeContainer from "./guesslike"
 import NewProductsContainer from "./newProducts"
+import HotContainer from "./hot"
+import StarTalkContainer from "./startalk"
 
 const mapState = state => {
   return {
@@ -25,10 +27,7 @@ const mapDispatch = dispatch => {
 };
 
 class StoreContainer extends Component {
-  // constructor() {
-  //   super();
-   
-  // }
+ 
   render() {
     return (
       <Fragment>
@@ -42,6 +41,8 @@ class StoreContainer extends Component {
                 <GoodList/>
                 <GuessLikeContainer/>
                 <NewProductsContainer/>
+                <HotContainer/>
+                <StarTalkContainer/>
             </StoreMain>
       </Fragment>
     )

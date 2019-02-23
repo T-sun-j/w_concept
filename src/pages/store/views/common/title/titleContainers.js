@@ -2,22 +2,31 @@ import React, { Component } from 'react'
 import {TitleStyled,TitleWrap} from './styledComponents'
 
 class TitleContainers extends Component {
+  constructor(){
+    super();
+    this.state={
+      titleDefault: "默认title",
+      flagDefault: "none"
+    }
+  
+     
+    
+  }
   render() {
 
-    let {title} = this.props;
+    let {title,flag} = this.props;
     return (
       <TitleStyled>
         <TitleWrap>
             <span className="titleSpan">
-              <span>{title}</span>
+              <span>{title?title:this.state.titleDefault}</span>
             </span>
+            <a  style= {{display: flag ? flag : this.state.flagDefault}} href="##"></a>
         </TitleWrap>
       </TitleStyled>
     )
   }
 }
- 
-const titleDefault =   "默认title";
  
 
 

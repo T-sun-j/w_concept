@@ -38,9 +38,9 @@ export default class Tab  extends Component {
           this.state.nav.map((item,index)=>{
               return   (
                     <div className="tabOne" key={index} >
-                        <a>
+                        <a href="##">
                         {/* <span className="icon" style={{background:url(item.style)}}></span> */}
-                          <span className="icon"><img src={item.style}/></span>
+                          <span className="icon"><img src={item.style} alt=""/></span>
                           <span className="txt">{item.text}</span>
                         </a>
                     </div>

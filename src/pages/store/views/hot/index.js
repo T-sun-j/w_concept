@@ -1,23 +1,23 @@
 import React, { Component } from 'react'
 import TitleContainers from "../common/title/titleContainers"
-import NewProducts from "./NewProducts"
-import {NewProductsStyled} from './styledComponents'
+import HotMain from "./hotMain"
+import {HotStyled} from './styledComponents'
   
-export default class NewProductsContainer extends Component {
+export default class HotContainer extends Component {
   constructor(){
     super();
     this.state={
-        title: "新品精选",
+        title: "热门品类",
         flag: true
     }
   }
   render() {
     let {title,flag} = this.state;
     return (
-      <NewProductsStyled>
+      <HotStyled>
           <TitleContainers  title={title} flag={flag}/>
-          <NewProducts/>
-      </NewProductsStyled>
+          <HotMain/>
+      </HotStyled>
     )
   }
 }

@@ -3,28 +3,28 @@ import {GET_NEWS_DATA} from "./actionTypes";
 
 
 //取第一组数据
-export const newsListDatasync = (newsData) => {
+export const newsListDatasync = (data) => {
     return {
       type: GET_NEWS_DATA,
-      newsData: newsData
+      data: data
     }
 }
 
 
 
-export const getNewList = ()=>{
-
+export const getNewList = (id)=>{
+    let url = "/api/m/v2/product/app/"+id+"?showprefix=1";
     let action = (data)=>({
         type: GET_NEWS_DATA,
-        // value:data
     })
+// /https://m.wconcept.cn/m/v2/product/app/722012?showprefix=1
 
     return (dispatch)=>{
-        fetch("/api/api/rest/wcc/productsv2/new/3")
+        fetch(url)
         .then(res=>res.json())
         .then(data => {
-            console.log(data)
-            dispatch(newsListDatasync(data.items))
+            // console.log(data)
+            dispatch(newsListDatasync(data))
         })
     }
 }
