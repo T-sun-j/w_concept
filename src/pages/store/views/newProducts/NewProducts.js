@@ -17,7 +17,7 @@ class NewProducts extends Component {
                         newList.toJS().map((item,index)=>{
                             return (
                                 // <div>{item}</div>
-                                    <a key={index} href="##"  href= {'/details?id='+item.product_id }>
+                                    <a key={index}  href= {'/details?id='+item.product_id }>
                                         <div className="img"><img src={item.image_url} alt=""/></div> 
                                         <div className="title">
                                             <p>{item.brand_name}</p>

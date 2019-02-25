@@ -3,6 +3,8 @@ import { Discovercontent } from './styleComponents'
 // import ContentUi from './contentUi'
 // import {  Toast } from "antd-mobile";
 // import Immutable from 'immutable';
+import { DetailsContainer as details} from "../../../details"
+import {Link, Route} from 'react-router-dom'
 import { getDis, getMore } from "../../actionCreator";
 import { connect } from 'react-redux';
 import { getPic } from '../../../../components/common/getPic'
@@ -41,6 +43,7 @@ class ContentContainer extends Component {
                     this.state.descriptions.map((item, index) => {
                       return (
                         <li key={index} data_id={item.product_id} onClick={this.handleToDetails.bind(this, item.product_id)}>
+                          <Link to={"/details?id="+item.product_id}>                   
                           <div className="left">
                             <img src={item.thumbnail} className="sub-image" alt="" />
                           </div>
@@ -52,6 +55,7 @@ class ContentContainer extends Component {
                               </div>
                             </div>
                           </div>
+                           </Link>
                         </li>
                       )
                     })

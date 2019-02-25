@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        {/* <Redirect from="/" to="/discover" />      */}
+        {/* <Redirect from="" to="/discover" />      */}
               
           {/* <Route exact  path='/store' component={store}></Route> */}
           {/* <Route exact  path='/discover' component={discover}></Route>
@@ -29,7 +29,7 @@ class App extends Component {
           <Route exact  path='/mine' component={mine}></Route> */}
           <Route path="/details" component={details}> </Route>
           <Route   path='/' component={index}></Route>  
-        </Switch>
+      </Switch>
     );
   }
 }

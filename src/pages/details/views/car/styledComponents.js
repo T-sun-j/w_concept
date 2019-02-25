@@ -25,7 +25,7 @@ const CartStyled = styled.div`
         div{
             line-height: 14px;
             font-size: 10px;
-            text-align: center
+            text-align: center;
             color: #9e9e9e;
         }
     }
