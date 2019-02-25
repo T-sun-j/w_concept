@@ -11,7 +11,7 @@ import {
 
 // import {MineContainer as min e} from './pages/mine'
 // import {RecommendContainer as recommend} from './pages/recommend'
-import {CarContainer as car} from './pages/shoppingcar'
+// import {CarContainer as car} from './pages/shoppingcar'
 // import {StoreContainer as store} from './pages/store'
 
 
@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <Switch>
-          <Redirect exact  from="/" to="/discover" />     
+        {/* <Redirect from="/" to="/discover" />      */}
               
           {/* <Route exact  path='/store' component={store}></Route> */}
           {/* <Route exact  path='/discover' component={discover}></Route>

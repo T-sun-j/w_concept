@@ -12,7 +12,7 @@ import {
 } from 'react-router-dom'
 
 import {
-  DiscoverContainer as Discover
+  discoverContainer as Discover
 } from '../discover'
 import {
   MineContainer as Mine

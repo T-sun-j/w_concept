@@ -1,6 +1,6 @@
-import DiscoverContainer from './views/discoverContainer'
+import discoverContainer from './views/discoverContainer'
  import reducer from './reducer'
 export {
-    DiscoverContainer,
+    discoverContainer,
     reducer
 }
