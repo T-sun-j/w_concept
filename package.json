@@ -7,6 +7,7 @@
     "@babel/preset-env": "^7.3.1",
     "antd-mobile": "^2.2.8",
     "babel-loader": "^8.0.5",
+    "better-scroll": "^1.14.1",
     "css-loader": "^2.1.0",
     "customize-cra": "^0.2.11",
     "http-proxy-middleware": "^0.19.1",

@@ -7,6 +7,6 @@ import reducers from './reducers'
 let store;
  
 store = createStore(reducers,applyMiddleware(thunk))
- 
+    
 
 export default store;

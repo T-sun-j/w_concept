@@ -1,6 +1,7 @@
 import Immutable from 'immutable';
 import {
-    GET_FIRST
+    GET_FIRST,
+    GET_SECOND
 } from './actionTypes'
 
 
@@ -13,9 +14,11 @@ export default (state = defaultState, action) => {
         case GET_FIRST:
             let firstListState = state.updateIn(["discoverList"], (x) => x.concat(action.value))
             return firstListState;
+        case GET_SECOND:
+            let moreListState = state.updateIn(["discoverList"], (x) => x.concat(action.value))
+            return moreListState;
         default:
             break;
     }
-    // console.log(state)
     return state;
 }
